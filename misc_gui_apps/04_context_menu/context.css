@@ -1,0 +1,92 @@
+body {
+  background-color: #226543;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+h1 {
+  color: white;
+  margin: 40px 20px;
+}
+
+#todos {
+  list-style-type: none;
+  width: 400px
+}
+
+#todos li {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#modal-container {
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#context-menu {
+  background-color: lightgray;
+  border-radius: 5px;
+  position: absolute;
+}
+
+#context-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#context-menu li {
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 5px 20px 5px 5px;
+}
+
+#context-menu li:hover {
+  color: white;
+  background-color: darkgray;
+}
+
+#modal {
+  background-color: white;
+  border-radius: 5px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 10px 20px 0 20px;
+  position: relative;
+  top: 150px;
+  width: 500px;
+}
+
+#modal a {
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+#actions {
+  float: right;
+}
+
+a.button {
+  cursor: pointer;
+}
+
+a.yes {
+  background-color: darkred;
+}
+
+a.no {
+  background-color: green;
+}

@@ -1,0 +1,40 @@
+body {
+  background-color: violet;
+  box-sizing: border-box;
+  color: white;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  width: 100%;
+}
+
+figure {
+  flex: 1 1 auto;
+  margin: 10px;
+}
+
+figure img {
+  border: 5px solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+figcaption {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.visible {
+  display: block;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}

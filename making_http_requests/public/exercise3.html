@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="vendor/prettify.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen, print">
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function formDataToJson(formData) {
+        let json = {};
+        for (let [key, value] of formData.entries()) {
+          json[key] = value;
+        }
+        return json;
+      }
+
+      let form = document.getElementById('form');
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        let formData = new FormData(form);
+        let json = JSON.stringify(formDataToJson(formData));
+        let request = new XMLHttpRequest;
+
+        request.open('POST', form.action);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(json);
+
+        request.addEventListener('load', () => {
+          switch(request.status) {
+            case 201:
+              let id = JSON.parse(request.response)['id'];
+              let text = 'Successfully created staff with id: ' + id;
+              alert(text);
+              form.reset();
+              break;
+            case 400:
+              alert(request.responseText);  
+          } 
+        });
+      });  
+    });
+  </script>
+</head>
+<script>
+  
+</script>
+<body>
+  <h1>Exercise 3</h1>
+  <h2>New Staff Form</h2>
+  <form id='form' action='/api/staff_members'>
+    <p><label for='email'>
+      Email :  
+      <input type='text' name='email'></input>
+    </label></p>
+    <p><label for='name'>
+      Name : 
+      <input type='text' name='name'></input>
+    </label></p>
+    <input type='submit'>
+  </form>
+</body>
+</html>

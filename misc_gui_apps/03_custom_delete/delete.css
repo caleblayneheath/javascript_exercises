@@ -1,0 +1,107 @@
+body {
+  background-color: #226543;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+h1 {
+  color: white;
+  margin: 40px 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: white;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 20px;
+  width: 400px;
+}
+
+span.remove {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  transform: rotate(45deg);
+  right: 20px;
+  cursor: pointer;
+}
+
+span.remove:hover {
+  width: 24px;
+  height: 24px;
+}
+
+span.remove:before, span.remove:after {
+  background: red;
+  content: "";
+  position: absolute;
+}
+
+span.remove:before {
+  height: 3px;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-top: -1px;
+}
+
+span.remove:after {
+  width: 3px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+#modal-container {
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#modal {
+  background-color: white;
+  border-radius: 5px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 10px 20px 0 20px;
+  position: relative;
+  top: 150px;
+  width: 500px;
+}
+
+#modal a {
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+#actions {
+  float: right;
+}
+
+a.button {
+  cursor: pointer;
+}
+
+a.yes {
+  background-color: darkred;
+}
+
+a.no {
+  background-color: green;
+}

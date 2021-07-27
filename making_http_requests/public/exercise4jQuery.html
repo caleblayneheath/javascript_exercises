@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="vendor/prettify.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen, print">
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src='exercise4jQuery.js'></script>
+</head>
+<body>
+  <h1>Exercise 4</h1>
+  <h2>New Schedule Form</h2>
+  <button type='button' id='add-schedule'>Add More Schedules</button>
+  <div id='form-container'>
+    <form>
+      <h3>Schedule 1</h3>
+      <p>
+        <label for='staff_id'>Staff Name : </label>
+        <select name='staff_id'>
+        </select>
+      </p>
+      <p>
+        <label for='date'>Date : </label>
+        <input placeholder='mm-dd-yy' name='date'></time>
+      </p>
+      <p>
+        <label for='time'>Time : </label>
+        <input placeholder='hh:mm' name='time'></time>
+      </p>
+    </form>
+    
+  </div>
+  <button type='button' id='submit-schedule'>Submit</button>
+</body>
+</html>

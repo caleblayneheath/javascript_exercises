@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function retrieveSchedules() {  
+        let request = new XMLHttpRequest;
+        request.open('GET', '/api/schedules');
+        request.timeout = 5000;
+        request.responseType = 'json';
+
+        request.addEventListener('timeout', () => {
+          alert('Please try again.');
+        });
+
+        request.addEventListener('load', () => {
+            let data = request.response;
+            let result = {};
+
+            (data||[]).forEach(schedule => {
+              let staff_id = schedule.staff_id;
+              result[staff_id] ? result[staff_id] += 1 : result[staff_id] = 1;
+            });
+
+            let text = Object.keys(result).map(key => {
+              return 'staff ' + key + ': ' + result[key] + ' schedules';
+            }).join('\n');
+
+            alert(text === '' ? 'No available schedules.' : text);
+        });
+
+        request.addEventListener('loadend', () => {
+          alert('Request completed.');  
+        });
+
+        request.send();
+      }
+
+      retrieveSchedules();
+    });
+
+  </script>
+</head>
+<script>
+
+</script>
+<body>
+  <h1>Exercise 2</h1>
+  
+</body>
+</html>

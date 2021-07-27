@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="vendor/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="vendor/prettify.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen, print">
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+  <script src='exercise5.js'></script>
+</head>
+<body>
+  <h1>Exercise 5</h1>
+  <form method='post' id='schedule-form' action='/api/bookings'>
+    <fieldset id='schedule-field' disabled>
+      <legend>Booking Schedule Form</legend>
+      <div>
+        <label for='schedule-selector'>Please select one schedule: </label>
+        <select name='id' id='schedule-selector'></select>
+      </div>
+      <div>
+        <label for='student_email'>Email: </label>
+        <input type='text' name='student_email' id='student-email'></input>
+        <input type='submit'></input>
+      </div>
+    </fieldset>   
+  </form>
+  <br>
+  <form method='post' id='new-student-form' action='/api/students' style='background-color: lightgray' hidden>
+    <fieldset id='new-student-field'>
+      <legend>Please provide new student details</legend>
+      <div>
+        <label for='new-student-email'>Email: </label>
+        <input type='text' name='email' id='new-student-email'></input>
+      </div>
+      <div>
+        <label for='student-name'>Name: </label>
+        <input type='text' name='name' id='student-name'></input>
+      </div>
+      <div>
+        <label for='booking-field'>Booking Sequence: </label>
+        <input type='text' name='booking_sequence' id='booking-field'></input>
+      </div>
+      <div>
+        <input type='submit'></input>
+      </div>
+    </fieldset>   
+  </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-color: cadetblue;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+#toolbar, #editor {
+  margin: 0 auto;
+  padding: 10px;
+  width: 800px;
+}
+
+#toolbar {
+  background-color: lightgray;
+}
+
+#toolbar button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+
+#toolbar button:hover {
+  background-color: white;
+}
+
+#editor {
+  background-color: white;
+  color: black;
+  min-height: 400px;
+  outline: white;
+}

@@ -1,0 +1,25 @@
+body {
+  background-color: olivedrab;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+main {
+  background: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 550px;
+}
+
+button {
+  background-color: olivedrab;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 2px 5px;
+}

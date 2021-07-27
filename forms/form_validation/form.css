@@ -1,0 +1,31 @@
+label {
+  display: block;
+  padding: 5px;
+}
+
+#fields input {
+  height: 15px;
+}
+
+fieldset {
+  border: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+fieldset input {
+  width: 40px;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+  margin-left: 10px;
+}
+
+form > input {
+  margin-top: 20px;
+}

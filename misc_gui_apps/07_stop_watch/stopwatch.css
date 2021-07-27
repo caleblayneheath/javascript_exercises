@@ -1,0 +1,36 @@
+body {
+  background-color: cadetblue;
+  color: white;
+}
+
+#stopwatch {
+  top: 200px;
+  text-align: center;
+  position: relative;
+}
+
+#stopwatch p {
+  font-family: monospace;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+#hours::after, #minutes::after, #seconds::after {
+  content: ':';
+  padding: 0 10px;
+}
+
+button {
+  background-color: cadetblue;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 10px 30px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

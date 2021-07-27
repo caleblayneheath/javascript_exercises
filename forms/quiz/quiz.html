@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quiz</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="quiz.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+  <h1>Multiple Choice Quiz</h1>
+</body>
+<script id="question-template" type="text/x-handlebars-template">
+  <fieldset id="question-{{id}}" data-id="{{id}}">
+    <legend>
+      Q{{id}}. {{{description}}}
+    </legend>
+    {{#each options}}
+      <label>
+        <input type="radio" value="{{this}}" name="question-{{../id}}"/ >
+        {{this}}
+      </label>
+    {{/each}}
+    <div class="feedback"></div>
+  </fieldset>
+</script>
+<script id="quiz-template" type="text/x-handlebars-template">
+  <form>
+  {{#each questions}}
+    {{>question}}
+  {{/each}}
+  <input type="submit" value="Submit Quiz"></input>
+  <input type="reset"></input>
+  </form>
+</script>
+<script src="quiz.js"></script>
+</html>

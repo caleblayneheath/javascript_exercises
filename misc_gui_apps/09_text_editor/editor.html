@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rich Text Editor</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="editor.css" />
+  <script src="https://kit.fontawesome.com/fd9fa0d4f0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Rich Text Editor</h1>
+  <div id="toolbar">
+    <button class="fas fa-bold" title="bold" data-command="bold"></button>
+    <button class="fas fa-italic" title="italic" data-command="italic"></button>
+    <button class="fas fa-underline" title="underline" data-command="underline"></button>
+    <button class="fas fa-strikethrough" title="strikethrough" data-command="strikeThrough"></button>
+    <button class="fas fa-link" title="link" data-command="createLink"></button>
+    <button class="fas fa-list-ul" title="unordered list" data-command="insertUnorderedList"></button>
+    <button class="fas fa-list-ol" title="ordered list" data-command="insertOrderedList"></button>
+    <button class="fas fa-align-left" title="justify left" data-command="justifyLeft"></button>
+    <button class="fas fa-align-right" title="justify right" data-command="justifyRight"></button>
+    <button class="fas fa-align-center" title="justify center" data-command="justifyCenter"></button>
+    <button class="fas fa-align-justify" title="full justify" data-command="justifyFull"> </button>
+  </div>
+  <div id="editor" contenteditable="true">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut quam et libero semper fermentum. Ut nibh lorem, congue quis convallis ac, tempor vel dui. Morbi nec dolor vel erat placerat ullamcorper sed et urna. Nam mattis turpis eget maximus vulputate. Etiam justo eros, lobortis non purus et, tincidunt cursus magna. Duis eget velit convallis leo efficitur rhoncus convallis ut erat. Morbi scelerisque faucibus diam, sit amet varius ante mollis sit amet. Mauris non nisl ut elit eleifend venenatis.
+
+Pellentesque vitae congue nisl, sed fringilla ligula. In blandit ligula ac ligula cursus, vel interdum nisl posuere. Quisque sagittis tortor nibh, ut interdum urna tempor quis. Integer scelerisque, nisi non aliquet porta, nulla nulla pulvinar ipsum, quis porttitor sem nunc non tortor. Cras eros mi, tincidunt vel lectus non, bibendum vehicula ante. Nulla viverra turpis est, et vestibulum velit molestie vel. Suspendisse sed ornare mi, id semper lorem. Suspendisse ac sodales purus, quis laoreet magna. Cras imperdiet lobortis congue. Cras id posuere nunc, ut gravida velit. Suspendisse eleifend eros sed velit convallis, in aliquet neque aliquet.
+
+  </div>
+</body>
+<script src="editor.js"></script>
+</html>

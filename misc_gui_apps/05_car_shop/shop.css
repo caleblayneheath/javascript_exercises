@@ -1,0 +1,83 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  background-color: darkgreen;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
+
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#filters select, input {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: darkgreen;
+  color: white;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  min-width: 50px;
+}
+
+#filters input {
+  height: 29px;
+  margin-left: 20px;
+}
+
+#listings {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 0 10px;
+}
+
+#listings li {
+  display: none;
+  margin: 10px;
+}
+
+#listings li.match {
+  display: block;
+}
+
+#listings figure {
+  margin: 0;
+}
+
+#listings figcaption {
+  font-weight: bold;
+}
+
+#listings img {
+  width: 200px;
+}
+
+#listings dl {
+  line-height: 1.5rem;
+  margin: 5px 0 10px 0;
+}
+
+#listings dt, dd {
+  display: inline;
+  margin: 0;
+}
+
+#listings dd:after {
+  display: block;
+  content: '';
+}
+
+#listings a {
+  background-color: darkgreen;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+}

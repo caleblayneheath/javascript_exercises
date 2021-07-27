@@ -1,0 +1,30 @@
+body {
+  background-color: peachpuff;
+}
+
+fieldset {
+  margin-bottom: 10px;
+}
+
+fieldset label {
+  display: block;
+}
+
+.feedback {
+  margin-top: 10px;
+  min-height: 20px;
+  padding: 10px 5px;
+}
+
+.feedback p {
+  margin: 0;
+  padding: 0;
+}
+
+.correct {
+  border: 1px solid green;
+}
+
+.incorrect {
+  border: 1px solid red;
+}

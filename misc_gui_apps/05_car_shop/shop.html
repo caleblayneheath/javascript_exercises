@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Shop</title>
+  <meta charset="utf-8" />
+  <link href="shop.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+<header>
+  <h1>Buy Used Cars</h1>
+  <form id="filters">
+    <label>
+      Make 
+      <select id="make" name="make">
+        <option value="">All</option>
+      </select>
+    </label>
+    <label>
+      Model 
+      <select id="model" name="model">
+        <option value="">All</option>
+      </select>
+    </label>
+    <label>
+      Price
+      <select id="price" name="price">
+        <option value="">Any</option>
+      </select>
+    </label>
+    <label>
+      Year
+      <select id="year" name="year">
+        <option value="">Any</option>
+      </select>
+    </label>
+    <input type='submit' value="Filter"></input>
+  </form>
+</header>
+<main>
+  <ul id="listings">
+  </ul>
+</main>
+</body>
+<script id="car_template" type="text/x-handlebars">
+  <li data-make="{{make}}" data-model="{{model}}" data-year="{{year}}" data-price="{{price}}" class="match">
+      <img src="{{image}}" />
+      <figcaption>{{make}} {{model}}</figcaption>
+    </figure>
+    <dl>
+      <dt>Year: </dt>
+      <dd>{{year}}</dd>
+      <dt>Price: </dt>
+      <dd>${{price}}</dd>
+    </dl>
+    <a href="">Buy</a>
+  </li>
+</script>
+<script src="shop.js"></script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todos</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="delete.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+<h1>Todos</h1>
+<ul id="todos">
+</ul>
+<div class="hidden" id="modal-container">
+  <div id="modal">
+    <p>Are you sure you want to delete this todo?</p>
+    <div id="actions">
+      <a class='yes button' data-confirm="true">Yes</a>
+      <a class='no button' data-confirm="false">No</a>
+    </div>
+  </div>
+</div>
+</body>
+<script src="delete.js"></script>
+<script id="todo_template" type="text/x-handlebars">
+  <li data-id="{{id}}">{{title}}<span class="remove"></span></li>
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todos</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="context.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+<h1>Todos</h1>
+<ul id="todos">
+</ul>
+<div class="hidden" id="context-menu">
+  <ul>
+    <li data-action="edit"><a>Edit Todo</a></li>
+    <li data-action="show_details"><a>Show Details</a></li>
+    <li data-action="delete"><a>Delete</a></li>
+  </ul>
+</div>
+<div class="hidden" id="modal-container">
+  <div id="modal">
+    <p>Are you sure you want to delete this todo?</p>
+    <div id="actions">
+      <a class='yes button' data-confirm="true">Yes</a>
+      <a class='no button'>No</a>
+    </div>
+  </div>
+</div>
+</body>
+<script src="context.js"></script>
+<script id="todo_template" type="text/x-handlebars">
+  <li data-id="{{id}}">{{title}}</li>
+</script>
+</html>
